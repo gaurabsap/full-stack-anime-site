@@ -1,0 +1,47 @@
+.footer{
+    margin-top: 130rem;
+    width: 100%;
+    height: 30vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+    padding: 20rem;
+    font-family: 'Roboto', sans-serif; 
+
+    .first{
+        h1{
+            color: red;
+            font-size: 2.2rem;
+        }
+        li{
+            cursor: pointer;
+            font-size: 1.7rem;
+        }
+    }
+    .second{
+        h1{
+            color: red;
+            font-size: 2.2rem;
+        }
+        li{
+            font-size: 1.7rem;
+        }
+    }
+    .logo{
+        a{
+            font-size: 3rem;
+            span{
+                color: red;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .footer{
+        display: none;
+    }
+}

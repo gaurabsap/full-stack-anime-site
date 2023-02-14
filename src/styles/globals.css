@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&family=Roboto:wght@100;300;400;500;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: white;
+    list-style: none;
+
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    background-color: rgb(26, 25, 25);
+    /* overflow-x: hidden; */
+}
+
+html{
+    font-size: 62.5%;
+ }
+
+ ::-webkit-scrollbar{
+    display: none;
+ }

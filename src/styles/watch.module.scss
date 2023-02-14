@@ -1,0 +1,132 @@
+.container{
+    margin-top: 1rem;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+    .first{
+        .title{
+            width: 110%;
+            h2{
+                text-align: start;
+                width: 100%;
+                background-color: goldenrod;
+                color: black;
+                padding: 0.7rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+
+            }
+        }
+        .episodes__lists{
+            width: 110%;
+            height: 60vh;
+            border: 1px solid rgb(179, 165, 165);
+            // border-bottom: 1px solid gray;
+            overflow-y: auto;
+            overflow-x: hidden;
+            .error{
+                width: 100%;
+                height: 100%;
+                color: red;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            h3{
+                text-align: center;
+                font-size: 1.6rem;
+                padding: 0.5rem;
+                color: red;
+            }
+            button{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.3rem;
+                padding: 1rem;
+                color: white;
+                background-color: green;
+                margin: 1.5rem;
+                border-radius: 5px;
+                cursor: pointer;
+                border: none;
+                outline: none;
+            }
+        }
+    }
+    .video{
+        width: 70%;
+        // height: 60vh;
+        margin-right: 10rem;
+        // border: 1px solid red;
+        .loading{
+            // width: 100%;
+            // text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60%;
+            color: red;
+        }
+        iframe{
+            width: 90%;
+            height: 100%;
+            // border: none;
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 10rem;
+            gap: 2rem;
+            button{
+                padding: 1rem 2rem;
+                font-size: 1.7rem;
+                cursor: pointer;
+                background-color: goldenrod;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                color: black;
+            }
+
+        }
+
+    }
+
+    
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        .episodes__lists{
+            justify-content: center;
+            width: 100%;
+            button{
+                width: 70%;
+                text-align: center;
+            }
+        }
+        .video{
+            width: 100%;
+            height: 100vh;
+            // border: 1px solid red;
+
+            iframe{
+                width: 100%;
+                height: 300%;
+            }
+            .loading{
+                color: red;
+            }
+        }
+    }
+}

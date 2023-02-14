@@ -1,0 +1,148 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: rgb(20, 18, 21);
+
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .menu{
+            display: none;
+        }
+        
+        a{
+            h1{
+                font-size: 3rem;
+                font-family: 'Roboto', sans-serif; 
+                span{
+                    color: red;
+                    transform: rotate(-2deg);
+                }
+            }
+        }
+
+    }
+    .links{
+        margin-right: 2rem;
+        a{
+            font-size: 1.6rem;
+            margin-right: 4rem;
+            position: relative;
+        }
+        a::after{
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: -3rem;
+            width: 0%;
+            height: 0.1vh;
+            background-color: red;
+            border-radius: 10px;
+            transition: all 0.8s ease;
+        }
+        a:hover::after{
+            width: 100%;
+        }
+        a:hover{
+            color: red;
+        }
+        a.active::after{
+            width: 100%;
+        }
+        a.active{
+            color: red;
+        }
+    }
+    .inputs{
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+        // gap: 1rem;
+        border: 1px solid red;
+        border-radius: 5px;
+        input{
+            // border: 1px solid red;
+            border: none;
+            font-size: 1.6rem;
+            padding: 0.8rem;
+            border-radius: 5px;
+            background-color: transparent;
+            color: white;
+            outline: none;        
+        }
+        button{
+            border: none;
+            color: lightblue;
+            background-color: transparent;
+            cursor: pointer;
+            margin-right: 2rem;
+
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .navbar{
+        overflow-x: hidden;
+        gap: 3.5rem;
+        .logo{
+            a{
+                transform: translateY(-3px);
+                h1{
+                    font-size: 2.2rem;
+
+                }
+            }
+            .menu{
+                display: block;
+                cursor: pointer;
+                font-size: 1.3rem;
+            }
+        }
+        .links{
+            display: none;
+        }
+        .toogmenu{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 7.8rem;
+            left: 0rem;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            background-color: rgb(20, 18, 21);
+            padding-bottom: 1rem;
+            z-index: 9999;
+            a{
+                margin-top: 5rem;
+                padding: 2rem;
+                font-size: 2rem;
+                z-index: 9999;
+            }
+        }
+        .inputs{
+            margin-right: 2.7rem;
+            border: none;
+            input{
+                padding: 0.7rem;
+                font-size: 1.2rem;
+                border: 1px solid red;
+                // margin-right: 1rem;
+            }
+            button{
+                margin-left: 1rem;
+                position: relative;
+                right: 0.7rem;
+                top: 2px;
+            }
+        }
+
+
+    }
+}
