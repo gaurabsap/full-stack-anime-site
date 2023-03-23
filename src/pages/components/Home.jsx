@@ -42,9 +42,6 @@ const Home = () => {
          }}
         scrollbar={{ draggable: true }}
         >
-
-
-
         {data.map((datas, index) => {
           const { animeId, animeImg, animeTitle, episodeId,episodeNum, subOrDub } = datas;
           return (
@@ -55,7 +52,7 @@ const Home = () => {
                     <h1>{animeTitle}</h1>
                     <h2>Total episodes : {episodeNum}</h2>
                     <h3>Lang : {subOrDub}</h3>
-                    <Link href={`/watch/${animeId}`}>
+                    <Link href={`/watch/${episodeId}`}>
                       <button>Watch</button>
                     </Link>
                   </div>
